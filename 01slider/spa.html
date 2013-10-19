@@ -64,13 +64,13 @@
       // extend slider if fully retracted
       if ( slider_height === configMap.extended_height ) {
         $chatSlider
-          .animate({ height: configMap.retracted_height })
+          .animate({ height: configMap.retracted_height } )
           .attr( 'title', configMap.retracted_title );
         return true;
       }
       else if ( slider_height === configMap.retracted_height ) {
         $chatSlider
-          .animate( { height: configMap.extended_height })
+          .animate( { height: configMap.extended_height } )
           .attr( 'title', configMap.extended_title );
         return true;
       }
@@ -97,8 +97,8 @@
       $chatSlider = $container.find( '.spa-slider' );
       // initialize slider height and title
       $chatSlider
+        .height( configMap.retracted_height )
         .attr( 'title', configMap.retracted_title )
-        .attr( 'height', configMap.retracted_height )
         .click( onClickSlider );
 
       return true;
